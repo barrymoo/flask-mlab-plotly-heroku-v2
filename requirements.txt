@@ -1,5 +1,4 @@
 Flask
 pymongo
-json
 plotly
 gunicorn
