@@ -52,11 +52,43 @@ def home_page():
                 ]
             )
 
+    layout = dict(
+                title = 'CRC Status',
+                titlefont = dict(
+                        size = 18
+                    ),
+                yaxis = dict(
+                        ticksuffix = '%',
+                        title = 'Percent Utilization',
+                        titlefont = dict(
+                                size = 18
+                            ),
+                        tickfont = dict(
+                                size = 18
+                            )
+                    ),
+                xaxis = dict(
+                    title = 'Date (MM/DD/YY-HH:MM:SS)',
+                    nticks = 4,
+                        titlefont = dict(
+                                size = 18
+                            ),
+                        tickfont = dict(
+                                size = 18
+                            )
+                    ),
+                legend = dict(
+                        font = dict(
+                                size = 18
+                            )
+                        )
+             )
 
-    graphJSON = json.dumps(graph, cls=plotly.utils.PlotlyJSONEncoder)
 
-    #return render_template("items.html", items=db['status'].find())
-    return render_template("items.html", graphJSON=graphJSON)
+    graph_json = json.dumps(graph, cls=plotly.utils.PlotlyJSONEncoder)
+    layout_json = json.dumps(layout, cls=plotly.utils.PlotlyJSONEncoder)
+
+    return render_template("index.html", graph_json=graph_json, layout_json=layout_json)
 
 if __name__ == "__main__":
     app.run()

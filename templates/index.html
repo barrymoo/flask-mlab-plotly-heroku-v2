@@ -1,11 +1,3 @@
-<!--
-<ul class="items">
-  {% for item in items %}
-  <li><h2>{{ item.x }}, {{ item.y }}</h2></li>
-  {% endfor %}
-</ul>
--->
-
 <head>
     <meta http-equiv="refresh" content="30" />
 </head>
@@ -19,7 +11,17 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <script type="text/javascript">
-        var graph = {{ graphJSON | safe }};
-        Plotly.plot('chart', graph.data);
+        var graph = {{ graph_json | safe }};
+        var layout = {{ layout_json | safe }};
+        Plotly.plot('chart', graph.data, layout);
     </script>
 </footer>    
+
+<!--
+<ul class="items">
+  {% for item in items %}
+  <li><h2>{{ item.x }}, {{ item.y }}</h2></li>
+  {% endfor %}
+</ul>
+-->
+
