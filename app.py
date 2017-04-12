@@ -11,18 +11,19 @@ client = pymongo.MongoClient(uri)
 def home_page():
     db = client.get_default_database()
 
-    _x = []
-    _y = []
+    smp_x = []
+    smp_y = []
     for item in db['smp'].find():
-        _x.append(item['x'])
-        _y.append(item['y'])
+        smp_x.append(item['x'])
+        smp_y.append(item['y'])
 
     graph = dict(
             data = [
                 dict(
-                    x=_x,
-                    y=_y,
-                    type = 'scatter'
+                    x=smp_x,
+                    y=smp_y,
+                    type = 'scatter',
+                    name = 'SMP'
                     )
                 ]
             )
