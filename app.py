@@ -25,6 +25,9 @@ def home_page():
                     type = 'scatter',
                     name = 'SMP'
                     )
+                ],
+            layout = [
+                    showlegend = 'true'
                 ]
             )
 
