@@ -29,6 +29,12 @@ def home_page():
         mpi_x.append(item['x'])
         mpi_y.append(item['y'])
 
+    htc_x = []
+    htc_y = []
+    for item in db['htc'].find():
+        htc_x.append(item['x'])
+        htc_y.append(item['y'])
+
     graph = dict(
             data = [
                 dict(
@@ -48,6 +54,12 @@ def home_page():
                     y=mpi_y,
                     type='scatter',
                     name='MPI'
+                    ),
+                dict(
+                    x=htc_x,
+                    y=htc_y,
+                    type='scatter',
+                    name='HTC'
                     )
                 ]
             )
