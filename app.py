@@ -80,7 +80,7 @@ def home_page():
                             )
                     ),
                 xaxis = dict(
-                    title = 'Date (MM/DD/YY-HH:MM:SS)',
+                    title = 'Date (MM/DD/YY-HH)',
                     nticks = 4,
                         titlefont = dict(
                                 size = 18
