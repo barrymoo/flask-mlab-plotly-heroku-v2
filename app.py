@@ -17,17 +17,38 @@ def home_page():
         smp_x.append(item['x'])
         smp_y.append(item['y'])
 
+    gpu_x = []
+    gpu_y = []
+    for item in db['gpu'].find():
+        gpu_x.append(item['x'])
+        gpu_y.append(item['y'])
+
+    mpi_x = []
+    mpi_y = []
+    for item in db['mpi'].find():
+        mpi_x.append(item['x'])
+        mpi_y.append(item['y'])
+
     graph = dict(
             data = [
                 dict(
                     x=smp_x,
                     y=smp_y,
-                    type = 'scatter',
-                    name = 'SMP'
+                    type='scatter',
+                    name='SMP'
+                    ),
+                dict(
+                    x=gpu_x,
+                    y=gpu_y,
+                    type='scatter',
+                    name='GPU'
+                    ),
+                dict(
+                    x=mpi_x,
+                    y=mpi_y,
+                    type='scatter',
+                    name='MPI'
                     )
-                ],
-            layout = [
-                    showlegend = 'true'
                 ]
             )
 
