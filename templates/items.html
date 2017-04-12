@@ -1,0 +1,25 @@
+<!--
+<ul class="items">
+  {% for item in items %}
+  <li><h2>{{ item.x }}, {{ item.y }}</h2></li>
+  {% endfor %}
+</ul>
+-->
+
+<head>
+    <meta http-equiv="refresh" content="30" />
+</head>
+
+<body>
+    <div id='chart'></div>
+<body>
+
+<footer>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script type="text/javascript">
+        var graph = {{ graphJSON | safe }};
+        Plotly.plot('chart', graph.data);
+    </script>
+</footer>    
