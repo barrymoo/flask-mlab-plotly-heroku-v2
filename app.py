@@ -60,31 +60,36 @@ def home_page():
                     x=smp_x,
                     y=smp_y,
                     type='scatter',
-                    name='SMP'
+                    name='SMP',
+                    mode='lines+markers'
                     ),
                 dict(
                     x=gpu_x,
                     y=gpu_y,
                     type='scatter',
-                    name='GPU (Cards)'
+                    name='GPU (Cards)',
+                    mode='lines+markers'
                     ),
                 dict(
                     x=mpi_x,
                     y=mpi_y,
                     type='scatter',
-                    name='MPI'
+                    name='MPI',
+                    mode='lines+markers'
                     ),
                 dict(
                     x=htc_x,
                     y=htc_y,
                     type='scatter',
-                    name='HTC'
+                    name='HTC',
+                    mode='lines+markers'
                     ),
                 dict(
                     x=ib_x,
                     y=ib_y,
                     type='scatter',
-                    name='MPI (IB below)'
+                    name='MPI (IB below)',
+                    mode='lines+markers'
                     )
                 ]
             )
