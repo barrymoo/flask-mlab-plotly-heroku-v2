@@ -117,7 +117,8 @@ def home_page():
                 legend = dict(
                         font = dict(
                                 size = 18
-                            )
+                            ),
+                        orientation = 'h'
                         )
              )
 
