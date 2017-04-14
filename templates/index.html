@@ -1,9 +1,45 @@
 <head>
-    <meta http-equiv="refresh" content="900"/>
+<meta http-equiv="refresh" content="900"/>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #d3d3d3;
+}
+
+th {
+    color: #1c2957;
+    background-color: #cdb87d;
+}
+</style>
 </head>
 
 <body>
     <div id='chart'></div>
+    <table>
+        <tr>
+            <th>Cluster</th>
+            <th>Allocated Cores</th>
+            <th>Total Cores</th>
+        </tr>
+        {% for item in items %}
+            <tr>
+                {% for i in item %}
+                    <td>{{ i }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 <body>
 
 <footer>
@@ -16,12 +52,3 @@
         Plotly.plot('chart', graph.data, layout);
     </script>
 </footer>    
-
-<!--
-<ul class="items">
-  {% for item in items %}
-  <li><h2>{{ item.x }}, {{ item.y }}</h2></li>
-  {% endfor %}
-</ul>
--->
-
