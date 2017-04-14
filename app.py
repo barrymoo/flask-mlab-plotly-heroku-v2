@@ -22,7 +22,7 @@ client = pymongo.MongoClient(uri)
 db = client.get_default_database()
 
 # The limit of datapoints to return
-limit = 10
+limit = 24
 
 @app.route('/')
 def home_page():
