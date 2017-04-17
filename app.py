@@ -95,13 +95,14 @@ def home_page():
             )
 
     layout = dict(
-                title = 'CRC Status',
-                titlefont = dict(
-                        size = 18
-                    ),
+                #title = 'CRC Status',
+                #titlefont = dict(
+                #        size = 18
+                #    ),
                 yaxis = dict(
                         ticksuffix = '%',
                         title = 'Percent Utilization',
+                        side = 'top',
                         titlefont = dict(
                                 size = 18
                             ),
@@ -122,8 +123,7 @@ def home_page():
                 legend = dict(
                         font = dict(
                                 size = 18
-                            )#,
-                        #orientation = 'h'
+                            )
                         )
              )
 
