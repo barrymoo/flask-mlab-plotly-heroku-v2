@@ -95,10 +95,10 @@ def home_page():
             )
 
     layout = dict(
-                #title = 'CRC Status',
-                #titlefont = dict(
-                #        size = 18
-                #    ),
+                title = 'CRC Status',
+                titlefont = dict(
+                        size = 18
+                    ),
                 yaxis = dict(
                         ticksuffix = '%',
                         title = 'Percent Utilization',
@@ -111,8 +111,7 @@ def home_page():
                     ),
                 xaxis = dict(
                     title = 'Date (MM/DD/YY-HH:MM)',
-                    side = 'top',
-                    nticks = 4,
+                    nticks = 2,
                         titlefont = dict(
                                 size = 18
                             ),
