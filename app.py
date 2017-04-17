@@ -102,7 +102,6 @@ def home_page():
                 yaxis = dict(
                         ticksuffix = '%',
                         title = 'Percent Utilization',
-                        side = 'top',
                         titlefont = dict(
                                 size = 18
                             ),
@@ -112,6 +111,7 @@ def home_page():
                     ),
                 xaxis = dict(
                     title = 'Date (MM/DD/YY-HH:MM)',
+                    side = 'top',
                     nticks = 4,
                         titlefont = dict(
                                 size = 18
